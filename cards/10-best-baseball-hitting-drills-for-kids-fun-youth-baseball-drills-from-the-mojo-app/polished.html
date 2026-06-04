@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f1b3d" />
+<title>10 Best MOJO Hitting Drills · Polished Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f3ecd9;
+    --bg-paper: #fbf6e8;
+    --ink: #0f1b3d;
+    --ink-soft: #3a4570;
+    --rule: #d8cdb0;
+    --red: #c8102e;
+    --red-deep: #931025;
+    --tan: #e6dbbe;
+    --shadow: 0 1px 0 rgba(15,27,61,.08), 0 8px 24px -16px rgba(15,27,61,.25);
+    --pad: clamp(1rem, 4vw, 1.5rem);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    margin: 0;
+    font-family: 'Manrope', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(15,27,61,.06) 1px, transparent 0);
+    background-size: 18px 18px;
+  }
+
+  header.top {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--ink);
+    color: var(--bg-paper);
+    padding: .75rem var(--pad);
+    border-bottom: 3px solid var(--red);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: .75rem;
+  }
+  header.top .mark {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: .04em;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex; align-items: center; gap: .5rem;
+  }
+  header.top .ball {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--bg-paper);
+    position: relative;
+    box-shadow: inset 0 0 0 2px var(--ink);
+  }
+  header.top .ball::before, header.top .ball::after {
+    content: ""; position: absolute; inset: 3px;
+    border: 1.5px solid var(--red);
+    border-radius: 50%;
+    border-color: var(--red) transparent transparent transparent;
+    transform: rotate(-30deg);
+  }
+  header.top .ball::after {
+    border-color: transparent transparent var(--red) transparent;
+    transform: rotate(-30deg);
+  }
+  header.top a.src {
+    font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--bg-paper); text-decoration: none;
+    border: 1px solid rgba(251,246,232,.4);
+    padding: .35rem .55rem; border-radius: 999px;
+    font-weight: 700;
+  }
+  header.top a.src:active { background: rgba(251,246,232,.15); }
+
+  .compare-banner {
+    background: var(--tan);
+    border-bottom: 1px solid var(--rule);
+    padding: .5rem var(--pad);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  .compare-banner a {
+    color: var(--red-deep);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 700;
+  }
+
+  .hero {
+    padding: 1.75rem var(--pad) .75rem;
+    background: linear-gradient(180deg, var(--bg-paper) 0%, var(--bg) 100%);
+    border-bottom: 1px dashed var(--rule);
+  }
+  .hero .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem; letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  .hero h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+    line-height: .95;
+    margin: 0 0 .6rem;
+    letter-spacing: .005em;
+    text-transform: uppercase;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--red);
+  }
+  .hero p.lede {
+    margin: 0;
+    font-size: .95rem;
+    color: var(--ink-soft);
+    max-width: 42ch;
+  }
+
+  section.summary { padding: 1.25rem var(--pad) 1.75rem; }
+  h2.section-title {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 1.4rem;
+    margin: 0 0 .9rem;
+    display: flex; align-items: center; gap: .6rem;
+  }
+  h2.section-title::after {
+    content: ""; flex: 1; height: 2px; background: var(--ink);
+  }
+  .drill-table {
+    background: var(--bg-paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .drill-table .row {
+    display: grid;
+    grid-template-columns: 38px 1fr auto;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem .85rem;
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .drill-table .row:last-child { border-bottom: none; }
+  .drill-table .row:active { background: var(--tan); }
+  .drill-table .row .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--red);
+    text-align: center;
+  }
+  .drill-table .row .name {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    line-height: 1.1;
+  }
+  .drill-table .row .focus {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: .1rem;
+  }
+  .drill-table .row .arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+  }
+  .tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .15rem .45rem;
+    border-radius: 3px;
+    margin-right: .25rem;
+    font-weight: 700;
+  }
+  .tag.field { background: #d4e7d4; color: #1d4a1d; }
+  .tag.bat   { background: #f3d6d9; color: var(--red-deep); }
+  .tag.throw { background: #d8e1f2; color: #1a3470; }
+  .tag.out   { background: #efe1c2; color: #6b4a14; }
+  .tag.run   { background: #e4d4ef; color: #4a1d6b; }
+  .tag.game  { background: #fde2c4; color: #6b3a14; }
+
+  section.drills { padding: .5rem var(--pad) 2rem; }
+  article.drill {
+    background: var(--bg-paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    padding: 1rem 1rem 1.1rem;
+    margin-bottom: 1rem;
+    scroll-margin-top: 80px;
+  }
+  article.drill header {
+    display: flex; align-items: baseline; gap: .55rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: .55rem;
+    margin-bottom: .75rem;
+    position: static;
+    background: transparent;
+  }
+  article.drill header .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .8rem;
+    color: var(--red);
+    font-weight: 700;
+    flex: 0 0 auto;
+  }
+  article.drill header h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0;
+    flex: 1;
+  }
+  article.drill header a.back {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+    text-decoration: none;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    padding: .2rem .4rem;
+    border-radius: 999px;
+  }
+  article.drill .teaches {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: .9rem;
+    margin: 0 0 .65rem;
+  }
+  article.drill img.still {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    margin: .25rem 0 .75rem;
+    display: block;
+  }
+  article.drill .yt {
+    display: inline-block;
+    background: var(--red);
+    color: var(--bg-paper);
+    padding: .4rem .7rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 700;
+    margin: 0 0 .5rem;
+    letter-spacing: .04em;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  article.drill h4 {
+    font-family: 'Manrope', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: .7rem;
+    color: var(--red);
+    margin: 1rem 0 .35rem;
+    font-weight: 800;
+  }
+  article.drill ul {
+    margin: 0 0 .25rem;
+    padding-left: 1.1rem;
+  }
+  article.drill ul li {
+    margin-bottom: .3rem;
+  }
+  article.drill ul li::marker { color: var(--red); }
+  article.drill .coach {
+    margin-top: .85rem;
+    background: var(--tan);
+    border-left: 3px solid var(--red);
+    padding: .65rem .75rem;
+    font-size: .9rem;
+    border-radius: 0 4px 4px 0;
+  }
+  article.drill .coach strong {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--red-deep);
+    margin-bottom: .25rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem var(--pad) 2.5rem;
+    border-top: 2px solid var(--ink);
+    background: var(--ink);
+    color: var(--bg-paper);
+    font-size: .8rem;
+  }
+  footer a {
+    color: var(--bg-paper);
+    text-decoration: underline;
+    text-decoration-color: var(--red);
+    text-underline-offset: 3px;
+  }
+  footer .stitch {
+    height: 6px;
+    margin-bottom: 1rem;
+    background: repeating-linear-gradient(135deg, var(--red) 0 8px, transparent 8px 14px);
+  }
+
+  a.totop {
+    position: fixed;
+    right: 14px; bottom: 14px;
+    background: var(--red);
+    color: var(--bg-paper);
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    z-index: 60;
+  }
+  a.totop:active { transform: scale(.95); }
+
+  @media (min-width: 720px) {
+    body { font-size: 17px; }
+    .hero, section.summary, section.drills {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .drill-table .row { grid-template-columns: 50px 1fr auto; padding: 1rem; }
+    .drill-table .row .name { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<span id="top" style="position:absolute; top:0;"></span>
+
+<header class="top">
+  <div class="mark"><span class="ball" aria-hidden="true"></span> Best MOJO Hitting Drills</div>
+  <a class="src" href="https://www.youtube.com/watch?v=gOE484Meo_o" target="_blank" rel="noopener">Source ↗</a>
+</header>
+
+<div class="compare-banner">
+  Polished view · <a href="./index.html">see raw auto-generated version →</a>
+</div>
+
+<section class="hero">
+  <div class="kicker">9 Hitting Drills · Tee · Soft Toss · Live</div>
+  <h1>Build a <em>level, compact</em> swing.</h1>
+  <p class="lede">Nine MOJO hitting drills that move kids from the tee to the moving ball — without losing balance, contact, or control. Tap any row to jump to the breakdown.</p>
+</section>
+
+<section class="summary">
+  <h2 class="section-title">At a Glance</h2>
+  <nav class="drill-table" aria-label="Drill summary">
+
+    <a class="row" href="#d1">
+      <span class="num">01</span>
+      <span>
+        <span class="name">Tee Time</span>
+        <span class="focus"><span class="tag bat">Bat</span> Controlled tee work, line drives only</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d2">
+      <span class="num">02</span>
+      <span>
+        <span class="name">Force Fields</span>
+        <span class="focus"><span class="tag bat">Bat</span> Three lines = three swing lengths</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d3">
+      <span class="num">03</span>
+      <span>
+        <span class="name">Kneeling Good</span>
+        <span class="focus"><span class="tag bat">Bat</span> One-knee soft toss, isolate hands</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d4">
+      <span class="num">04</span>
+      <span>
+        <span class="name">Line Drive Derby</span>
+        <span class="focus"><span class="tag bat">Bat</span> Pairs race for most frozen ropes</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d5">
+      <span class="num">05</span>
+      <span>
+        <span class="name">Soft Toss Slugging</span>
+        <span class="focus"><span class="tag bat">Bat</span> Side toss, head still, watch the ball</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d6">
+      <span class="num">06</span>
+      <span>
+        <span class="name">Front Toss Frenzy</span>
+        <span class="focus"><span class="tag bat">Bat</span> Underhand from behind L-screen</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d7">
+      <span class="num">07</span>
+      <span>
+        <span class="name">Inside Outside</span>
+        <span class="focus"><span class="tag bat">Bat</span> Two tees · pull inside, push outside</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d8">
+      <span class="num">08</span>
+      <span>
+        <span class="name">Bounce Ball</span>
+        <span class="focus"><span class="tag bat">Bat</span> Foam-ball bounces build patience</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d9">
+      <span class="num">09</span>
+      <span>
+        <span class="name">Think Fast</span>
+        <span class="focus"><span class="tag bat">Bat</span> Two-color toss, call mid-air</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+  </nav>
+</section>
+
+<section class="drills">
+
+<article class="drill" id="d1">
+  <header>
+    <span class="num">01</span>
+    <h3>Tee Time</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Pure form work — line drives off the tee, no pitch pressure.</p>
+  <img class="still" src="drill-01.jpg" alt="Tee Time" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=gOE484Meo_o&t=14s" target="_blank">▶ Watch · 0:14</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Pair players up · line pairs outside the batting cage</li>
+    <li>One tee in the cage · bucket of balls beside it</li>
+    <li>First pair in: helmets on · name a hitter and a feeder</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Feeder places a ball on the tee, then <em>steps clear</em></li>
+    <li>Hitter takes a controlled, level swing — line drive through the middle</li>
+    <li>Repeat until the bucket is empty, then both shag the balls</li>
+    <li>Switch roles and run it back</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    If a player asks why no live pitching — tell them the pros still take tee work. This is where you fix balance, finish, and swing path with zero pitch-recognition noise.
+  </div>
+</article>
+
+<article class="drill" id="d2">
+  <header>
+    <span class="num">02</span>
+    <h3>Force Fields</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Swing close to the fence to build a more compact, powerful cut.</p>
+  <img class="still" src="drill-02.jpg" alt="Force Fields" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=gOE484Meo_o&t=162s" target="_blank">▶ Watch · 2:42</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Team lined up in the outfield, facing the wall</li>
+    <li>Draw 3 lines in the warning track: 3 ft, 5 ft, and 7 ft from the wall</li>
+    <li>One bat, one helmet up first</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Furthest line first — full normal swing</li>
+    <li>Middle line — pull hands in closer to the body</li>
+    <li>Closest line — hands tight, short and compact (don't hit the fence)</li>
+    <li>Rotate so every player gets several turns at all three distances</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Long, open swings look powerful but are slower and weaker. A compact swing concentrates force on the ball — that's where real game-day power comes from.
+  </div>
+</article>
+
+<article class="drill" id="d3">
+  <header>
+    <span class="num">03</span>
+    <h3>Kneeling Good</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Take the legs out so the hands do the work — one piece at a time.</p>
+  <img class="still" src="drill-03.jpg" alt="Kneeling Good" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=gOE484Meo_o&t=240s" target="_blank">▶ Watch · 4:00</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Line team up in foul territory</li>
+    <li>Coach 4 ft to the side of home plate with a bucket</li>
+    <li>Hitter in box: back knee down, front leg extended for balance</li>
+  </ul>
+
+  <h4>How to Play (3 rounds)</h4>
+  <ul>
+    <li><strong>Round 1</strong> — bottom hand only · lead with the elbow</li>
+    <li><strong>Round 2</strong> — top hand only · emphasize follow-through</li>
+    <li><strong>Round 3</strong> — both hands · swing away</li>
+    <li>3 clean contacts in each round before moving on</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Not even the Bambino swung for the fences every pitch. Sometimes a single or a ground out gets the job done — kneeling exposes whose hands are doing the real work.
+  </div>
+</article>
+
+<article class="drill" id="d4">
+  <header>
+    <span class="num">04</span>
+    <h3>Line Drive Derby</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Competitive tee work — most line drives in two minutes wins.</p>
+  <img class="still" src="drill-04.jpg" alt="Line Drive Derby" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=gOE484Meo_o&t=329s" target="_blank">▶ Watch · 5:29</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Two tees inside the cage, 10 ft apart</li>
+    <li>Two pairs at a time — one hitter, one feeder each</li>
+    <li>Hitters face <em>away</em> from each other · helmets on</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Feeders place balls; hitters rope line drives to the back of the cage</li>
+    <li>Feeder counts line drives only · re-loads only when safe</li>
+    <li>Swap roles after 1 minute · pair with most line drives after 2 min wins</li>
+    <li>Rotate so every pair competes</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    When the competition kicks in, kids rush. A faster bat is not a better hit. Solid contact comes from a swing that stays <em>level, compact, and in control</em>.
+  </div>
+</article>
+
+<article class="drill" id="d5">
+  <header>
+    <span class="num">05</span>
+    <h3>Soft Toss Slugging</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Bridge from tee to live ball — solid swings on a moving target.</p>
+  <img class="still" src="drill-05.jpg" alt="Soft Toss Slugging" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=gOE484Meo_o&t=410s" target="_blank">▶ Watch · 6:50</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Line team up · coach 4 ft to the side of the plate</li>
+    <li>Bucket of balls · hitter in a strong, balanced stance</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Coach soft-tosses; hitter takes smooth, quality swings</li>
+    <li>10 swings, then rotate</li>
+    <li>Each hitter tracks longest streak of solid hits · beat it next round</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    The #1 fix here is "don't pull your head out." Keep the head still through contact — eyes on the ball longer means more contact and better luck at the plate.
+  </div>
+</article>
+
+<article class="drill" id="d6">
+  <header>
+    <span class="num">06</span>
+    <h3>Front Toss Frenzy</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Underhand tosses up the middle — build swing muscle memory.</p>
+  <img class="still" src="drill-06.jpg" alt="Front Toss Frenzy" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=gOE484Meo_o&t=482s" target="_blank">▶ Watch · 8:02</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Coach 15 ft from home, <em>behind an L-screen</em></li>
+    <li>Bucket of balls · hitter in the cage with a bat</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Coach underhands a ball; hitter ropes a line drive up the middle</li>
+    <li>10 swings per hitter · count the frozen ropes</li>
+    <li>Most line drives wins the round</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Pitch recognition is <em>not</em> the goal here. Even on a toss that drifts, call out where it's headed so the hitter can focus 100% on a level swing and solid contact.
+  </div>
+</article>
+
+<article class="drill" id="d7">
+  <header>
+    <span class="num">07</span>
+    <h3>Inside Outside</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Directional hitting — pull the inside pitch, push the outside one.</p>
+  <img class="still" src="drill-07.jpg" alt="Inside Outside" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=gOE484Meo_o&t=544s" target="_blank">▶ Watch · 9:04</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Two tees at home plate:</li>
+    <li><strong>Inside tee</strong> — in front of the plate, hip height</li>
+    <li><strong>Outside tee</strong> — on the outside corner, thigh height</li>
+    <li>Coach off to the side with a bucket of balls</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Hitter takes 6 cuts at the inside tee — aim between 2nd and 3rd</li>
+    <li>Then 6 at the outside tee — aim between 1st and 2nd</li>
+    <li>+1 every ball on target · improve the score next round</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Different spots, same job: <em>stay inside the ball</em> and hit a line drive. Don't let them yank the outside pitch or push the inside one — direction comes from contact point, not muscle.
+  </div>
+</article>
+
+<article class="drill" id="d8">
+  <header>
+    <span class="num">08</span>
+    <h3>Bounce Ball</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Patience &amp; timing — wait on the ball before you commit.</p>
+  <img class="still" src="drill-08.jpg" alt="Bounce Ball" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=gOE484Meo_o&t=617s" target="_blank">▶ Watch · 10:17</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Pick a few hitters · everyone else in the field</li>
+    <li>Coach stands between home and the mound</li>
+    <li>Bucket of <em>foam balls</em></li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Coach bounces the ball to land ~2 ft in front of the plate</li>
+    <li>Ball arrives at hip level for the hitter to swing</li>
+    <li>10 swings each · track hits, beat the count next time</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Keep weight on the back foot as long as possible before swinging. That's the same load you need to adjust from a fastball to a changeup — "when you're waiting for the express, it's hard to hit the locals."
+  </div>
+</article>
+
+<article class="drill" id="d9">
+  <header>
+    <span class="num">09</span>
+    <h3>Think Fast</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Pitch recognition under pressure — pick the right ball mid-swing.</p>
+  <img class="still" src="drill-09.jpg" alt="Think Fast" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=gOE484Meo_o&t=686s" target="_blank">▶ Watch · 11:26</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Line team up in foul territory</li>
+    <li>Coach 4 ft to the side of home with a bucket of <em>two-color</em> plastic balls</li>
+    <li>Hitter steps to the plate with a bat</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Soft-toss two different colored balls at the same time</li>
+    <li>While they're in the air, call out a color</li>
+    <li>Hitter adjusts mid-motion and hits the called ball</li>
+    <li>5 swings each · most points after the round wins</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Knowing what <em>not</em> to swing at matters just as much as the swing itself. This drill rehearses the split-second decision they'll make on every pitch come game day.
+  </div>
+</article>
+
+</section>
+
+<footer>
+  <div class="stitch" aria-hidden="true"></div>
+  <p>Polished from <a href="https://www.youtube.com/watch?v=gOE484Meo_o" target="_blank" rel="noopener">10 Best Baseball Hitting Drills for Kids · MOJO</a></p>
+  <p style="opacity:.6; margin-top:.4rem;">Compare with the <a href="./index.html" style="color:var(--bg-paper);">raw auto-generated card</a> · 9 drills</p>
+</footer>
+
+<a class="totop" href="#top" aria-label="Back to top">↑</a>
+
+</body>
+</html>

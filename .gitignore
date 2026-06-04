@@ -1,0 +1,19 @@
+# Source videos — large and not referenced by the site (cards link to YouTube)
+*.mp4
+
+# Local build / dev tooling — not needed to serve the static site
+build_drill_card.py
+build_home.py
+serve.py
+transcript.py
+_usage.txt
+urls.txt
+
+# Source transcripts
+*.txt
+
+# Python / OS cruft
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

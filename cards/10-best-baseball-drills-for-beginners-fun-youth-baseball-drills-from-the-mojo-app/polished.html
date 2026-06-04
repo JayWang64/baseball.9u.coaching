@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f1b3d" />
+<title>10 Best Beginner Baseball Drills · Polished Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f3ecd9;
+    --bg-paper: #fbf6e8;
+    --ink: #0f1b3d;
+    --ink-soft: #3a4570;
+    --rule: #d8cdb0;
+    --red: #c8102e;
+    --red-deep: #931025;
+    --tan: #e6dbbe;
+    --shadow: 0 1px 0 rgba(15,27,61,.08), 0 8px 24px -16px rgba(15,27,61,.25);
+    --pad: clamp(1rem, 4vw, 1.5rem);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    margin: 0;
+    font-family: 'Manrope', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(15,27,61,.06) 1px, transparent 0);
+    background-size: 18px 18px;
+  }
+
+  header.top {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--ink);
+    color: var(--bg-paper);
+    padding: .75rem var(--pad);
+    border-bottom: 3px solid var(--red);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: .75rem;
+  }
+  header.top .mark {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: .04em;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex; align-items: center; gap: .5rem;
+  }
+  header.top .ball {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--bg-paper);
+    position: relative;
+    box-shadow: inset 0 0 0 2px var(--ink);
+  }
+  header.top .ball::before, header.top .ball::after {
+    content: ""; position: absolute; inset: 3px;
+    border: 1.5px solid var(--red);
+    border-radius: 50%;
+    border-color: var(--red) transparent transparent transparent;
+    transform: rotate(-30deg);
+  }
+  header.top .ball::after {
+    border-color: transparent transparent var(--red) transparent;
+    transform: rotate(-30deg);
+  }
+  header.top a.src {
+    font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--bg-paper); text-decoration: none;
+    border: 1px solid rgba(251,246,232,.4);
+    padding: .35rem .55rem; border-radius: 999px;
+    font-weight: 700;
+  }
+  header.top a.src:active { background: rgba(251,246,232,.15); }
+
+  .compare-banner {
+    background: var(--tan);
+    border-bottom: 1px solid var(--rule);
+    padding: .5rem var(--pad);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  .compare-banner a {
+    color: var(--red-deep);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 700;
+  }
+
+  .hero {
+    padding: 1.75rem var(--pad) .75rem;
+    background: linear-gradient(180deg, var(--bg-paper) 0%, var(--bg) 100%);
+    border-bottom: 1px dashed var(--rule);
+  }
+  .hero .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem; letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  .hero h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+    line-height: .95;
+    margin: 0 0 .6rem;
+    letter-spacing: .005em;
+    text-transform: uppercase;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--red);
+  }
+  .hero p.lede {
+    margin: 0;
+    font-size: .95rem;
+    color: var(--ink-soft);
+    max-width: 42ch;
+  }
+
+  section.summary { padding: 1.25rem var(--pad) 1.75rem; }
+  h2.section-title {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 1.4rem;
+    margin: 0 0 .9rem;
+    display: flex; align-items: center; gap: .6rem;
+  }
+  h2.section-title::after {
+    content: ""; flex: 1; height: 2px; background: var(--ink);
+  }
+  .drill-table {
+    background: var(--bg-paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .drill-table .row {
+    display: grid;
+    grid-template-columns: 38px 1fr auto;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem .85rem;
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .drill-table .row:last-child { border-bottom: none; }
+  .drill-table .row:active { background: var(--tan); }
+  .drill-table .row .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--red);
+    text-align: center;
+  }
+  .drill-table .row .name {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    line-height: 1.1;
+  }
+  .drill-table .row .focus {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: .1rem;
+  }
+  .drill-table .row .arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+  }
+  .tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .15rem .45rem;
+    border-radius: 3px;
+    margin-right: .25rem;
+    font-weight: 700;
+  }
+  .tag.field { background: #d4e7d4; color: #1d4a1d; }
+  .tag.bat   { background: #f3d6d9; color: var(--red-deep); }
+  .tag.throw { background: #d8e1f2; color: #1a3470; }
+  .tag.out   { background: #efe1c2; color: #6b4a14; }
+  .tag.run   { background: #e4d4ef; color: #4a1d6b; }
+  .tag.game  { background: #fde2c4; color: #6b3a14; }
+
+  section.drills { padding: .5rem var(--pad) 2rem; }
+  article.drill {
+    background: var(--bg-paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    padding: 1rem 1rem 1.1rem;
+    margin-bottom: 1rem;
+    scroll-margin-top: 80px;
+  }
+  article.drill header {
+    display: flex; align-items: baseline; gap: .55rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: .55rem;
+    margin-bottom: .75rem;
+    position: static;
+    background: transparent;
+  }
+  article.drill header .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .8rem;
+    color: var(--red);
+    font-weight: 700;
+    flex: 0 0 auto;
+  }
+  article.drill header h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0;
+    flex: 1;
+  }
+  article.drill header a.back {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+    text-decoration: none;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    padding: .2rem .4rem;
+    border-radius: 999px;
+  }
+  article.drill .teaches {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: .9rem;
+    margin: 0 0 .65rem;
+  }
+  article.drill img.still {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    margin: .25rem 0 .75rem;
+    display: block;
+  }
+  article.drill .yt {
+    display: inline-block;
+    background: var(--red);
+    color: var(--bg-paper);
+    padding: .4rem .7rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 700;
+    margin: 0 0 .5rem;
+    letter-spacing: .04em;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  article.drill h4 {
+    font-family: 'Manrope', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: .7rem;
+    color: var(--red);
+    margin: 1rem 0 .35rem;
+    font-weight: 800;
+  }
+  article.drill ul {
+    margin: 0 0 .25rem;
+    padding-left: 1.1rem;
+  }
+  article.drill ul li {
+    margin-bottom: .3rem;
+  }
+  article.drill ul li::marker { color: var(--red); }
+  article.drill .coach {
+    margin-top: .85rem;
+    background: var(--tan);
+    border-left: 3px solid var(--red);
+    padding: .65rem .75rem;
+    font-size: .9rem;
+    border-radius: 0 4px 4px 0;
+  }
+  article.drill .coach strong {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--red-deep);
+    margin-bottom: .25rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem var(--pad) 2.5rem;
+    border-top: 2px solid var(--ink);
+    background: var(--ink);
+    color: var(--bg-paper);
+    font-size: .8rem;
+  }
+  footer a {
+    color: var(--bg-paper);
+    text-decoration: underline;
+    text-decoration-color: var(--red);
+    text-underline-offset: 3px;
+  }
+  footer .stitch {
+    height: 6px;
+    margin-bottom: 1rem;
+    background: repeating-linear-gradient(135deg, var(--red) 0 8px, transparent 8px 14px);
+  }
+
+  a.totop {
+    position: fixed;
+    right: 14px; bottom: 14px;
+    background: var(--red);
+    color: var(--bg-paper);
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    z-index: 60;
+  }
+  a.totop:active { transform: scale(.95); }
+
+  @media (min-width: 720px) {
+    body { font-size: 17px; }
+    .hero, section.summary, section.drills {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .drill-table .row { grid-template-columns: 50px 1fr auto; padding: 1rem; }
+    .drill-table .row .name { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<span id="top" style="position:absolute; top:0;"></span>
+
+<header class="top">
+  <div class="mark"><span class="ball" aria-hidden="true"></span> Beginner MOJO Drills</div>
+  <a class="src" href="https://www.youtube.com/watch?v=kwdBVc6I-C4" target="_blank" rel="noopener">Source &#8599;</a>
+</header>
+
+<div class="compare-banner">
+  Polished view &middot; <a href="./index.html">see raw auto-generated version &rarr;</a>
+</div>
+
+<section class="hero">
+  <div class="kicker">First-Season Fundamentals &middot; 10 Drills</div>
+  <h1>Ten drills for <em>brand-new</em> ballplayers.</h1>
+  <p class="lede">Low-pressure, high-rep games for first-year baseball and softball coaches. Mostly fielding and a couple of game-style finishers, all pulled straight from the MOJO beginner playbook. Tap any row to jump to the breakdown.</p>
+</section>
+
+<section class="summary">
+  <h2 class="section-title">At a Glance</h2>
+  <nav class="drill-table" aria-label="Drill summary">
+
+    <a class="row" href="#d1">
+      <span class="num">01</span>
+      <span>
+        <span class="name">Alligator Traps</span>
+        <span class="focus"><span class="tag field">Field</span> Two-hand grounders</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+    <a class="row" href="#d2">
+      <span class="num">02</span>
+      <span>
+        <span class="name">Base Path Blitz</span>
+        <span class="focus"><span class="tag run">Run</span> Listen-and-run base running</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+    <a class="row" href="#d3">
+      <span class="num">03</span>
+      <span>
+        <span class="name">Tee Time</span>
+        <span class="focus"><span class="tag bat">Bat</span> Level swing off the tee</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+    <a class="row" href="#d4">
+      <span class="num">04</span>
+      <span>
+        <span class="name">Lazy Catch</span>
+        <span class="focus"><span class="tag field">Field</span> Knees-down grounders</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+    <a class="row" href="#d5">
+      <span class="num">05</span>
+      <span>
+        <span class="name">Belly Up</span>
+        <span class="focus"><span class="tag field">Field</span> Reaction-time grounders</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+    <a class="row" href="#d6">
+      <span class="num">06</span>
+      <span>
+        <span class="name">Up Top Down Low</span>
+        <span class="focus"><span class="tag field">Field</span> Glove position, hand-eye</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+    <a class="row" href="#d7">
+      <span class="num">07</span>
+      <span>
+        <span class="name">Force Out &middot; Tag Out</span>
+        <span class="focus"><span class="tag out">Out</span> Two ways to erase a runner</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+    <a class="row" href="#d8">
+      <span class="num">08</span>
+      <span>
+        <span class="name">Cleanup Crew</span>
+        <span class="focus"><span class="tag throw">Throw</span> Low-pressure overhand reps</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+    <a class="row" href="#d9">
+      <span class="num">09</span>
+      <span>
+        <span class="name">Grab Bag</span>
+        <span class="focus"><span class="tag field">Field</span> Grounders + pop-ups</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+    <a class="row" href="#d10">
+      <span class="num">10</span>
+      <span>
+        <span class="name">Blast Ball</span>
+        <span class="focus"><span class="tag game">Game</span> No-strikeout scrimmage</span>
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+
+  </nav>
+</section>
+
+<section class="drills">
+
+<article class="drill" id="d1">
+  <header>
+    <span class="num">01</span>
+    <h3>Alligator Traps</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Gobble up grounders with proper two-hand technique.</p>
+  <img class="still" src="drill-01.jpg" alt="Alligator Traps" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=12s" target="_blank">&#9654; Watch &middot; 0:12</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Line up team &middot; coach stands 10 ft away</li>
+    <li>First player in set stance &mdash; knees bent, hips low</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Roll a grounder to the first fielder</li>
+    <li>They receive with <em>both hands</em> &mdash; top hand snaps down like an alligator</li>
+    <li>Throw back to coach</li>
+    <li>3 grounders per player, then go to the back of the line</li>
+    <li>Track clean fields &mdash; challenge them to beat their score next round</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Eyes on the ball <em>all the way into the glove</em>. The better they see it, the less likely it is to scoot past them.
+  </div>
+</article>
+
+<article class="drill" id="d2">
+  <header>
+    <span class="num">02</span>
+    <h3>Base Path Blitz</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Every base-running scenario, on your call.</p>
+  <img class="still" src="drill-02.jpg" alt="Base Path Blitz" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=77s" target="_blank">&#9654; Watch &middot; 1:17</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Line team up behind home plate</li>
+    <li>Coach in foul territory near a base path (a second coach can cover the other side)</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Player steps into the batter's box &mdash; no bat</li>
+    <li>On your call, they fake-swing and take off</li>
+    <li>Approaching 1st: you tell them <em>run through &middot; turn &amp; look &middot; round to 2nd</em></li>
+    <li>Approaching 2nd: you tell them <em>stay &middot; go to 3rd &middot; round home</em></li>
+    <li>+1 every time they touch the plate</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Runners don't watch the ball &mdash; they <em>listen to the coach</em>. Their job is run hard and react.
+  </div>
+</article>
+
+<article class="drill" id="d3">
+  <header>
+    <span class="num">03</span>
+    <h3>Tee Time</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Turn weak contact into line drives.</p>
+  <img class="still" src="drill-03.jpg" alt="Tee Time" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=170s" target="_blank">&#9654; Watch &middot; 2:50</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Pairs line up outside the batting cage</li>
+    <li>Within each pair: one hitter, one feeder &middot; helmets on</li>
+    <li>First pair steps to the tee inside the cage</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Feeder places ball on the tee, then steps a safe distance away</li>
+    <li>Hitter takes a controlled, level swing &mdash; drive a line drive through the box</li>
+    <li>Feeder reloads after each swing</li>
+    <li>When the bucket is empty, both retrieve balls and switch roles</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Even Major Leaguers do tee work. Strip away pitch recognition so they can focus purely on balance, form, and finish &mdash; that's how a swing actually gets refined.
+  </div>
+</article>
+
+<article class="drill" id="d4">
+  <header>
+    <span class="num">04</span>
+    <h3>Lazy Catch</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Read grounders from a low knees-down stance.</p>
+  <img class="still" src="drill-04.jpg" alt="Lazy Catch" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=247s" target="_blank">&#9654; Watch &middot; 4:07</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Groups of 5 &middot; coach 15 ft from the front of the line</li>
+    <li>All 5 players on both knees (don't sit on heels)</li>
+    <li>Glove fingertips on the ground, ready</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Roll a grounder to each player in turn</li>
+    <li>They field &amp; throw back <em>without standing or sitting</em></li>
+    <li>Work down the line &middot; then back, this time with backhanded grounders</li>
+    <li>+1 per clean field &mdash; beat last round's score</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Two hands every time. Snap the top hand <em>down</em> on the ball like an alligator. Backhand plays = scoop &amp; lift. Both hands is the only way to make it to the show.
+  </div>
+</article>
+
+<article class="drill" id="d5">
+  <header>
+    <span class="num">05</span>
+    <h3>Belly Up</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Reaction time &mdash; react, charge, field.</p>
+  <img class="still" src="drill-05.jpg" alt="Belly Up" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=325s" target="_blank">&#9654; Watch &middot; 5:25</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Team lies face-down on their bellies in a line</li>
+    <li>Coach 20 ft away with a ball</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Call <em>"Up!"</em> and roll a ball toward the first player</li>
+    <li>They pop up, charge, field, throw back</li>
+    <li>Work down the line &middot; mix in a few pop-ups to keep them honest</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Don't let them jump the gun before you call up. First step in fielding is <em>seeing</em> where the ball is going.
+  </div>
+</article>
+
+<article class="drill" id="d6">
+  <header>
+    <span class="num">06</span>
+    <h3>Up Top Down Low</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Hand-eye coordination &mdash; high &amp; low glove positions.</p>
+  <img class="still" src="drill-06.jpg" alt="Up Top Down Low" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=390s" target="_blank">&#9654; Watch &middot; 6:30</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Pair up players &middot; ~10 ft apart</li>
+    <li>One ball per pair</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Round 1: underhand pop-ups &middot; partner catches with glove in <em>high-five</em> position (fingers up)</li>
+    <li>10 catches each, then switch to round 2</li>
+    <li>Round 2: low underhand throws &middot; partner catches with glove in <em>low-five</em> position (fingers down)</li>
+    <li>Count total catches &middot; beat the score next round</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Every fly ball pros make look like "a can of corn" was built on reps like this. Drill the glove position now &mdash; it's muscle memory they'll lean on for years.
+  </div>
+</article>
+
+<article class="drill" id="d7">
+  <header>
+    <span class="num">07</span>
+    <h3>Force Out &middot; Tag Out</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Learn the two ways to erase a runner.</p>
+  <img class="still" src="drill-07.jpg" alt="Force Out · Tag Out" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=453s" target="_blank">&#9654; Watch &middot; 7:33</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Pairs of 1 runner + 1 fielder (with glove &amp; ball)</li>
+    <li>Spread across the base paths &middot; pairs ~10 ft apart</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Coach calls one of two commands:</li>
+    <li><strong>"Tag out!"</strong> &rarr; fielder tries to tag the runner</li>
+    <li><strong>"Force out!"</strong> &rarr; fielder sprints to a bag &amp; tags it with their foot before the runner gets there</li>
+    <li>+1 per successful out &middot; 60 sec, then switch roles</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Force out vs. tag out trips up every young player. Simplest cue: on the playground, tag means you're <em>it</em>. On the diamond, tag means you're <em>out</em>.
+  </div>
+</article>
+
+<article class="drill" id="d8">
+  <header>
+    <span class="num">08</span>
+    <h3>Cleanup Crew</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Low-pressure way to get comfortable throwing overhand.</p>
+  <img class="still" src="drill-08.jpg" alt="Cleanup Crew" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=522s" target="_blank">&#9654; Watch &middot; 8:42</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Cones form two adjoining rectangles &mdash; one on infield dirt, one on outfield grass</li>
+    <li>Equal number of practice balls in each zone</li>
+    <li>Split team in half &middot; one team per zone</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>On go, each team throws balls <em>overhand</em> into the other team's zone</li>
+    <li>After 1 minute call <strong>"Freeze!"</strong> &mdash; everyone drops what they have</li>
+    <li>Whichever team has fewer balls in their zone wins</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Don't sweat the form yet &mdash; the chaos is the point. Just get the ball across. Refine throwing mechanics in another drill.
+  </div>
+</article>
+
+<article class="drill" id="d9">
+  <header>
+    <span class="num">09</span>
+    <h3>Grab Bag</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Alternate grounders and pop-ups, line to line.</p>
+  <img class="still" src="drill-09.jpg" alt="Grab Bag" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=588s" target="_blank">&#9654; Watch &middot; 9:48</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Two cones 10 ft apart in the outfield</li>
+    <li>Split team in half, line up behind each cone</li>
+    <li>Coach ~15 ft in front, between the lines, with a bucket</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Round 1: grounders to one line, pop-ups to the other</li>
+    <li>Field, throw back, move to the end of the other line</li>
+    <li>Round 2: mix grounders &amp; pop-ups between both lines &mdash; they stay on their toes</li>
+    <li>+1 per clean field &mdash; beat the round-1 score</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Foam balls tempt one-handed catches. Reinforce two hands every time &mdash; that's the habit that travels into real games and keeps them off the blooper reel.
+  </div>
+</article>
+
+<article class="drill" id="d10">
+  <header>
+    <span class="num">10</span>
+    <h3>Blast Ball</h3>
+    <a class="back" href="#top">&uarr;</a>
+  </header>
+  <p class="teaches">Low-stakes, high-fun scrimmage &mdash; first taste of the game.</p>
+  <img class="still" src="drill-10.jpg" alt="Blast Ball" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=kwdBVc6I-C4&t=672s" target="_blank">&#9654; Watch &middot; 11:12</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Split team: one group at bat, one in the field (no gloves needed)</li>
+    <li>Coach pitches for <em>both</em> teams</li>
+    <li>Use a plastic bat &amp; practice ball</li>
+  </ul>
+
+  <h4>How to Play (modified rules)</h4>
+  <ul>
+    <li><strong>No strikeouts</strong> &mdash; hitter keeps swinging until they make contact</li>
+    <li>Innings end only when <em>every</em> hitter has batted</li>
+    <li>Any ball that reaches outfield grass = <strong>home run</strong></li>
+    <li>Most runs after 3 innings = Blast Ball World Champions</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Bigger ball + no strikeouts = newbies feel safe and successful. Crossing home plate is just as sweet &mdash; celebrate every run.
+  </div>
+</article>
+
+</section>
+
+<footer>
+  <div class="stitch" aria-hidden="true"></div>
+  <p>Polished from <a href="https://www.youtube.com/watch?v=kwdBVc6I-C4" target="_blank" rel="noopener">10 Best Baseball Drills for Beginners</a></p>
+  <p style="opacity:.6; margin-top:.4rem;">Compare with the <a href="./index.html" style="color:var(--bg-paper);">raw auto-generated card</a> &middot; 10 drills</p>
+</footer>
+
+<a class="totop" href="#top" aria-label="Back to top">&uarr;</a>
+
+</body>
+</html>

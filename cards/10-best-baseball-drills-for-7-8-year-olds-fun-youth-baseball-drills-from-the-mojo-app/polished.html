@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f1b3d" />
+<title>10 Best MOJO Drills for 7-8 Year Olds · Polished Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f3ecd9;
+    --bg-paper: #fbf6e8;
+    --ink: #0f1b3d;
+    --ink-soft: #3a4570;
+    --rule: #d8cdb0;
+    --red: #c8102e;
+    --red-deep: #931025;
+    --tan: #e6dbbe;
+    --shadow: 0 1px 0 rgba(15,27,61,.08), 0 8px 24px -16px rgba(15,27,61,.25);
+    --pad: clamp(1rem, 4vw, 1.5rem);
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    margin: 0;
+    font-family: 'Manrope', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(15,27,61,.06) 1px, transparent 0);
+    background-size: 18px 18px;
+  }
+
+  header.top {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--ink);
+    color: var(--bg-paper);
+    padding: .75rem var(--pad);
+    border-bottom: 3px solid var(--red);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: .75rem;
+  }
+  header.top .mark {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: .04em;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex; align-items: center; gap: .5rem;
+  }
+  header.top .ball {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--bg-paper);
+    position: relative;
+    box-shadow: inset 0 0 0 2px var(--ink);
+  }
+  header.top .ball::before, header.top .ball::after {
+    content: ""; position: absolute; inset: 3px;
+    border: 1.5px solid var(--red);
+    border-radius: 50%;
+    border-color: var(--red) transparent transparent transparent;
+    transform: rotate(-30deg);
+  }
+  header.top .ball::after {
+    border-color: transparent transparent var(--red) transparent;
+    transform: rotate(-30deg);
+  }
+  header.top a.src {
+    font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--bg-paper); text-decoration: none;
+    border: 1px solid rgba(251,246,232,.4);
+    padding: .35rem .55rem; border-radius: 999px;
+    font-weight: 700;
+  }
+  header.top a.src:active { background: rgba(251,246,232,.15); }
+
+  .compare-banner {
+    background: var(--tan);
+    border-bottom: 1px solid var(--rule);
+    padding: .5rem var(--pad);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  .compare-banner a {
+    color: var(--red-deep);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 700;
+  }
+
+  .hero {
+    padding: 1.75rem var(--pad) .75rem;
+    background: linear-gradient(180deg, var(--bg-paper) 0%, var(--bg) 100%);
+    border-bottom: 1px dashed var(--rule);
+  }
+  .hero .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem; letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  .hero h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+    line-height: .95;
+    margin: 0 0 .6rem;
+    letter-spacing: .005em;
+    text-transform: uppercase;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--red);
+  }
+  .hero p.lede {
+    margin: 0;
+    font-size: .95rem;
+    color: var(--ink-soft);
+    max-width: 42ch;
+  }
+
+  section.summary { padding: 1.25rem var(--pad) 1.75rem; }
+  h2.section-title {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 1.4rem;
+    margin: 0 0 .9rem;
+    display: flex; align-items: center; gap: .6rem;
+  }
+  h2.section-title::after {
+    content: ""; flex: 1; height: 2px; background: var(--ink);
+  }
+  .drill-table {
+    background: var(--bg-paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .drill-table .row {
+    display: grid;
+    grid-template-columns: 38px 1fr auto;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem .85rem;
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .drill-table .row:last-child { border-bottom: none; }
+  .drill-table .row:active { background: var(--tan); }
+  .drill-table .row .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--red);
+    text-align: center;
+  }
+  .drill-table .row .name {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    line-height: 1.1;
+  }
+  .drill-table .row .focus {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: .1rem;
+  }
+  .drill-table .row .arrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+  }
+  .tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .15rem .45rem;
+    border-radius: 3px;
+    margin-right: .25rem;
+    font-weight: 700;
+  }
+  .tag.field { background: #d4e7d4; color: #1d4a1d; }
+  .tag.bat   { background: #f3d6d9; color: var(--red-deep); }
+  .tag.throw { background: #d8e1f2; color: #1a3470; }
+  .tag.out   { background: #efe1c2; color: #6b4a14; }
+  .tag.run   { background: #e4d4ef; color: #4a1d6b; }
+  .tag.game  { background: #fde2c4; color: #6b3a14; }
+
+  section.drills { padding: .5rem var(--pad) 2rem; }
+  article.drill {
+    background: var(--bg-paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    padding: 1rem 1rem 1.1rem;
+    margin-bottom: 1rem;
+    scroll-margin-top: 80px;
+  }
+  article.drill header {
+    display: flex; align-items: baseline; gap: .55rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: .55rem;
+    margin-bottom: .75rem;
+    position: static;
+    background: transparent;
+  }
+  article.drill header .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .8rem;
+    color: var(--red);
+    font-weight: 700;
+    flex: 0 0 auto;
+  }
+  article.drill header h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0;
+    flex: 1;
+  }
+  article.drill header a.back {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem;
+    text-decoration: none;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    padding: .2rem .4rem;
+    border-radius: 999px;
+  }
+  article.drill .teaches {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: .9rem;
+    margin: 0 0 .65rem;
+  }
+  article.drill img.still {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    margin: .25rem 0 .75rem;
+    display: block;
+  }
+  article.drill .yt {
+    display: inline-block;
+    background: var(--red);
+    color: var(--bg-paper);
+    padding: .4rem .7rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 700;
+    margin: 0 0 .5rem;
+    letter-spacing: .04em;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  article.drill h4 {
+    font-family: 'Manrope', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: .7rem;
+    color: var(--red);
+    margin: 1rem 0 .35rem;
+    font-weight: 800;
+  }
+  article.drill ul {
+    margin: 0 0 .25rem;
+    padding-left: 1.1rem;
+  }
+  article.drill ul li {
+    margin-bottom: .3rem;
+  }
+  article.drill ul li::marker { color: var(--red); }
+  article.drill .coach {
+    margin-top: .85rem;
+    background: var(--tan);
+    border-left: 3px solid var(--red);
+    padding: .65rem .75rem;
+    font-size: .9rem;
+    border-radius: 0 4px 4px 0;
+  }
+  article.drill .coach strong {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--red-deep);
+    margin-bottom: .25rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem var(--pad) 2.5rem;
+    border-top: 2px solid var(--ink);
+    background: var(--ink);
+    color: var(--bg-paper);
+    font-size: .8rem;
+  }
+  footer a {
+    color: var(--bg-paper);
+    text-decoration: underline;
+    text-decoration-color: var(--red);
+    text-underline-offset: 3px;
+  }
+  footer .stitch {
+    height: 6px;
+    margin-bottom: 1rem;
+    background: repeating-linear-gradient(135deg, var(--red) 0 8px, transparent 8px 14px);
+  }
+
+  a.totop {
+    position: fixed;
+    right: 14px; bottom: 14px;
+    background: var(--red);
+    color: var(--bg-paper);
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    z-index: 60;
+  }
+  a.totop:active { transform: scale(.95); }
+
+  @media (min-width: 720px) {
+    body { font-size: 17px; }
+    .hero, section.summary, section.drills {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .drill-table .row { grid-template-columns: 50px 1fr auto; padding: 1rem; }
+    .drill-table .row .name { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<span id="top" style="position:absolute; top:0;"></span>
+
+<header class="top">
+  <div class="mark"><span class="ball" aria-hidden="true"></span> MOJO Drills · 7-8 Year Olds</div>
+  <a class="src" href="https://www.youtube.com/watch?v=nJzDHd9Tc1M" target="_blank" rel="noopener">Source ↗</a>
+</header>
+
+<div class="compare-banner">
+  Polished view · <a href="./index.html">see raw auto-generated version →</a>
+</div>
+
+<section class="hero">
+  <div class="kicker">8 Drills · Built for the 7-8 Crowd</div>
+  <h1>Loud calls, <em>two hands</em>, smooth transfers.</h1>
+  <p class="lede">Eight MOJO drills tuned for first- and second-year players — communication, fielding fundamentals, throwing accuracy, and hitting mechanics. Tap any row to jump straight to the breakdown.</p>
+</section>
+
+<section class="summary">
+  <h2 class="section-title">At a Glance</h2>
+  <nav class="drill-table" aria-label="Drill summary">
+
+    <a class="row" href="#d1">
+      <span class="num">01</span>
+      <span>
+        <span class="name">Mind the Gap</span>
+        <span class="focus"><span class="tag out">Out</span> Calling for fly balls + backup</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d2">
+      <span class="num">02</span>
+      <span>
+        <span class="name">Right On Target</span>
+        <span class="focus"><span class="tag throw">Throw</span> Pitching to corners of the zone</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d3">
+      <span class="num">03</span>
+      <span>
+        <span class="name">Four Corners</span>
+        <span class="focus"><span class="tag throw">Throw</span> Around-the-horn relay</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d4">
+      <span class="num">04</span>
+      <span>
+        <span class="name">Two Ball</span>
+        <span class="focus"><span class="tag field">Field</span> Barehand catching with both hands</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d5">
+      <span class="num">05</span>
+      <span>
+        <span class="name">Knockout</span>
+        <span class="focus"><span class="tag game">Game</span> Last-pitcher-standing strike contest</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d6">
+      <span class="num">06</span>
+      <span>
+        <span class="name">Soft Toss Slugging</span>
+        <span class="focus"><span class="tag bat">Bat</span> Bridge from tee to moving ball</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d7">
+      <span class="num">07</span>
+      <span>
+        <span class="name">Throwing Seeds</span>
+        <span class="focus"><span class="tag out">Out</span> Outfield throws to home</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="row" href="#d8">
+      <span class="num">08</span>
+      <span>
+        <span class="name">Pop Quiz</span>
+        <span class="focus"><span class="tag field">Field</span> Whole-team consecutive pop-ups</span>
+      </span>
+      <span class="arrow">→</span>
+    </a>
+
+  </nav>
+</section>
+
+<section class="drills">
+
+<article class="drill" id="d1">
+  <header>
+    <span class="num">01</span>
+    <h3>Mind the Gap</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Tracking fly balls + loud, clear calls between two fielders.</p>
+  <img class="still" src="drill-01.jpg" alt="Mind the Gap" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=nJzDHd9Tc1M&t=13s" target="_blank">▶ Watch · 0:13</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>2 cones in the outfield, ~30 ft apart</li>
+    <li>Team splits into two equal lines, one at each cone</li>
+    <li>Coach stands 20 ft in front, between the cones, with a ball</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>One line = primary fielders · the other = backups</li>
+    <li>Lob a ball high &amp; right down the middle of the gap</li>
+    <li>Both players sprint to center — primary <strong>calls it loud</strong>, backup peels off but stays ready</li>
+    <li>Fielder throws ball back; next pair goes</li>
+    <li>After everyone's had a turn, swap roles</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    There's no such thing as calling too loudly. Stay silent and they'll collide. Game day is noisy — train them to <em>own the call</em> over the parents and the PA.
+  </div>
+</article>
+
+<article class="drill" id="d2">
+  <header>
+    <span class="num">02</span>
+    <h3>Right On Target</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Pitching to spots — corners, down Broadway, low.</p>
+  <img class="still" src="drill-02.jpg" alt="Right On Target" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=nJzDHd9Tc1M&t=250s" target="_blank">▶ Watch · 4:10</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Pitchers line up behind the mound</li>
+    <li>Coach catches behind the plate</li>
+    <li>Each pitcher gets 12 pitches per round</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Throw 2 pitches each to imaginary targets, in order:</li>
+    <li>Up &amp; away · down &amp; away · up &amp; in · down &amp; in</li>
+    <li>Then one right down Broadway, finish middle-low</li>
+    <li>+1 point per strike on target — beat your high score next round</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    If they're missing spots, have them <em>point the glove arm at the target</em>. That steadies the line of sight and keeps their head from flying open.
+  </div>
+</article>
+
+<article class="drill" id="d3">
+  <header>
+    <span class="num">03</span>
+    <h3>Four Corners</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Accurate throws around the diamond, in rhythm.</p>
+  <img class="still" src="drill-03.jpg" alt="Four Corners" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=nJzDHd9Tc1M&t=313s" target="_blank">▶ Watch · 5:13</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>4 groups, one at each base · everyone has a glove</li>
+    <li>First player in each group stands on the bag</li>
+    <li>Catcher starts with the ball</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>On go, ball goes: catcher → 1st → 2nd → 3rd → home</li>
+    <li>Catch · turn · step · throw — all the way around</li>
+    <li>After 2 rounds, reverse: catcher → 2nd → 1st → 3rd → home</li>
+    <li>Count consecutive throws without a drop — beat last group's streak</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    The whip around the horn is all about the <em>transfer</em> — glove to hand in one fluid motion. In a real game that's the difference between the out and a run scoring.
+  </div>
+</article>
+
+<article class="drill" id="d4">
+  <header>
+    <span class="num">04</span>
+    <h3>Two Ball</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Barehand catching — confidence when the glove isn't an option.</p>
+  <img class="still" src="drill-04.jpg" alt="Two Ball" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=nJzDHd9Tc1M&t=392s" target="_blank">▶ Watch · 6:32</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Players form a circle, equidistant, <strong>no gloves</strong></li>
+    <li>Coach in the middle with two balls, one in each hand</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Make eye contact, underhand both balls simultaneously</li>
+    <li>Player catches one in each hand, underhands them both back</li>
+    <li>Track the streak — beat it next time</li>
+    <li>Once they've got it, volunteers rotate into the middle</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Kids would rather catch with a glove — but they won't always have the option. Think awkward feed turning two, or a hot grounder off the chest. <em>Bare-handing the ball is a real skill.</em>
+  </div>
+</article>
+
+<article class="drill" id="d5">
+  <header>
+    <span class="num">05</span>
+    <h3>Knockout</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Pitching under pressure — paint the corner or get knocked out.</p>
+  <img class="still" src="drill-05.jpg" alt="Knockout" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=nJzDHd9Tc1M&t=462s" target="_blank">▶ Watch · 7:42</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Pitchers line up behind the mound · coach catches behind plate</li>
+    <li>First player gets a ball, climbs the mound</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Throw a strike → safe, go to the back of the line</li>
+    <li>Throw a ball → you're on the hot seat, next pitcher is up</li>
+    <li>Next pitcher throws a strike → previous pitcher is OUT</li>
+    <li>Next pitcher throws a ball → hot seat flips back</li>
+    <li>Last ace standing wins</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Good pitching isn't about throwing hard. <em>Painting the corner beats a blazing fastball</em> — even in the majors. Reward the kid who lives on the edges.
+  </div>
+</article>
+
+<article class="drill" id="d6">
+  <header>
+    <span class="num">06</span>
+    <h3>Soft Toss Slugging</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Bridge from tee work to hitting a moving ball.</p>
+  <img class="still" src="drill-06.jpg" alt="Soft Toss Slugging" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=nJzDHd9Tc1M&t=530s" target="_blank">▶ Watch · 8:50</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Coach kneels ~4 ft to the side of the plate with a bucket</li>
+    <li>Hitter steps in with a balanced batting stance</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Soft-toss into the hitting zone — 10 swings per hitter</li>
+    <li>Smooth, quality swings — not max effort</li>
+    <li>Hitter counts solid hits in a row, then beats it next round</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    The #1 fix at this age: <em>don't pull the head out</em>. Tell them to keep their chin tucked to the front shoulder and watch the ball hit the bat. Head still = more contact, every time.
+  </div>
+</article>
+
+<article class="drill" id="d7">
+  <header>
+    <span class="num">07</span>
+    <h3>Throwing Seeds</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Outfield throws to the plate — cut runners down.</p>
+  <img class="still" src="drill-07.jpg" alt="Throwing Seeds" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=nJzDHd9Tc1M&t=602s" target="_blank">▶ Watch · 10:02</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Trash can on its side at home plate, opening facing the field</li>
+    <li>Team lines up in the outfield</li>
+    <li>Coach 50 ft away with a bat &amp; bucket</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>First fielder in ready position — legs moving, knees bent</li>
+    <li>Hit them a ball (mix grounders and fly balls)</li>
+    <li>They field it &amp; throw toward home, trying to land it in the can</li>
+    <li>Next fielder up · most balls in the can wins</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Form first, heat second. Cue them every rep: <em>elbow up, glove pointed at the target, let it fly.</em> Sloppy mechanics = sailed throw and a run scores.
+  </div>
+</article>
+
+<article class="drill" id="d8">
+  <header>
+    <span class="num">08</span>
+    <h3>Pop Quiz</h3>
+    <a class="back" href="#top">↑</a>
+  </header>
+  <p class="teaches">Whole-team pop-ups — catch a target number in a row, or start over.</p>
+  <img class="still" src="drill-08.jpg" alt="Pop Quiz" loading="lazy">
+  <a class="yt" href="https://www.youtube.com/watch?v=nJzDHd9Tc1M&t=673s" target="_blank">▶ Watch · 11:13</a>
+
+  <h4>Setup</h4>
+  <ul>
+    <li>Team takes the field — one player per position</li>
+    <li>Coach stands in front of home with a bucket</li>
+    <li>Pick a target number of consecutive catches (e.g., 5)</li>
+  </ul>
+
+  <h4>How to Play</h4>
+  <ul>
+    <li>Throw fly balls around the field at random</li>
+    <li>Every catch counts toward the target</li>
+    <li><strong>Anyone drops it — back to zero.</strong> Whole team starts over</li>
+    <li>Hit the target = team wins the round</li>
+  </ul>
+
+  <div class="coach">
+    <strong>Coaching tip</strong>
+    Two hands, every catch. Kids will try to one-hand it like the pros — remind them <em>the only way to make it to the show is by securing the ball</em>. And call it loud: "ball, ball, ball" — even when no one else is close.
+  </div>
+</article>
+
+</section>
+
+<footer>
+  <div class="stitch" aria-hidden="true"></div>
+  <p>Polished from <a href="https://www.youtube.com/watch?v=nJzDHd9Tc1M" target="_blank" rel="noopener">10 Best Baseball Drills for 7-8 Year Olds</a></p>
+  <p style="opacity:.6; margin-top:.4rem;">Compare with the <a href="./index.html" style="color:var(--bg-paper);">raw auto-generated card</a> · 8 drills</p>
+</footer>
+
+<a class="totop" href="#top" aria-label="Back to top">↑</a>
+
+</body>
+</html>
